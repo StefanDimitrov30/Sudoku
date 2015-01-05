@@ -8,12 +8,11 @@ import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
 public class SmallGrid extends JPanel {
-	
+
 	private static final int Fields = 3;
 
 	private JPanel[][] miniPanel;
-	private Field [][] field;
-	
+	private Field[][] field;
 
 	public SmallGrid() {
 
@@ -22,8 +21,7 @@ public class SmallGrid extends JPanel {
 		for (int x = 0; x < miniPanel.length; x++) {
 			for (int y = 0; y < miniPanel.length; y++) {
 				miniPanel[x][y] = new JPanel(new GridLayout(3, 3));
-				miniPanel[x][y].setBorder(BorderFactory
-						.createLineBorder(Color.BLACK));
+				miniPanel[x][y].setBorder(BorderFactory.createLineBorder(Color.BLACK));
 
 				add(miniPanel[x][y]);
 
@@ -31,6 +29,9 @@ public class SmallGrid extends JPanel {
 
 		}
 
+	}
+	public SmallGrid(Field [][] field){
+		this.field = new Field[getX()][getY()];
 	}
 
 }

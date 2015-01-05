@@ -1,5 +1,7 @@
 package useriinterface;
 
+import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.GridLayout;
 
 import javax.swing.JFrame;
@@ -14,14 +16,16 @@ public class MainWindow extends JFrame {
 	public static void main(String[] args) {
 		JFrame sudoku = new JFrame("SUDOKU");
 		sudoku.setSize(650, 650);
-		sudoku.setLayout(new GridLayout(3,3));
+		sudoku.setLayout(new BorderLayout());
 		sudoku.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		JPanel miniPanel = new SmallGrid();
-		sudoku.add(miniPanel);
-		
-		
+		JPanel panel = new JPanel(new GridLayout(3, 3));
+		panel.setBackground(Color.BLUE);
+		JPanel grid = new SmallGrid();
+		panel.add(grid);
+		sudoku.add(panel);
+
 		sudoku.setVisible(true);
-		
+
 	}
 
 }

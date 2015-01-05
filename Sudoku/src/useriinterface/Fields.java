@@ -5,7 +5,7 @@ import java.lang.reflect.Field;
 public class Fields {
 	private int x;
 	private int y;
-	;
+	
 
 	public Fields(int x, int y) {
 
