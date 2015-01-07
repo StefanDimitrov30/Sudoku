@@ -8,8 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.JToggleButton;
 
 public class ButtoPanel extends JPanel {
-    private JButton [] buttons;
-    private JPanel panel;
+    private JButton[] buttons;
 
     public ButtoPanel() {
 	super(new FlowLayout());
@@ -18,7 +17,7 @@ public class ButtoPanel extends JPanel {
 	    buttons[i] = new JButton("9");
 
 	    add(buttons[i]);
-	    
+
 	}
 	add(new JButton("New"));
 	add(new JButton("Check"));

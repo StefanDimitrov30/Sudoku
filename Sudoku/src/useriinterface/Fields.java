@@ -5,20 +5,20 @@ import java.awt.Dimension;
 
 import javax.swing.JLabel;
 
-public class Field extends JLabel {
+public class Fields extends JLabel {
     private int x;
     private int y;
     private int number;
-    Field fields;
+    Fields fields;
 
-    public Field(int x, int y) {
+    public Fields(int x, int y) {
 	super("", CENTER);
-	setPreferredSize(new Dimension(0, 0));
+	setPreferredSize(new Dimension(25, 2));
 	this.x = x;
 	this.y = y;
     }
-@Override
-    public int getX() {
+
+    public int getVarX() {
 	return x;
     }
 
@@ -27,7 +27,8 @@ public class Field extends JLabel {
 	setText(number > 0 ? number + "" : "");
 	this.number = number;
     }
-public int getVarY() {
+
+    public int getVarY() {
 	return y;
     }
 
