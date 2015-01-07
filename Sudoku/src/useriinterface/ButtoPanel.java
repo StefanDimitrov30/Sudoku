@@ -15,10 +15,13 @@ public class ButtoPanel extends JPanel {
 	super(new FlowLayout());
 	this.buttons = new JButton[9];
 	for (int i = 0; i < buttons.length; i++) {
-	    buttons[i] = new JButton("Button");
+	    buttons[i] = new JButton("9");
 
 	    add(buttons[i]);
+	    
 	}
+	add(new JButton("New"));
+	add(new JButton("Check"));
     }
 
 }

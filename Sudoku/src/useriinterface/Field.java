@@ -17,7 +17,7 @@ public class Field extends JLabel {
 	this.x = x;
 	this.y = y;
     }
-
+@Override
     public int getX() {
 	return x;
     }
@@ -27,8 +27,7 @@ public class Field extends JLabel {
 	setText(number > 0 ? number + "" : "");
 	this.number = number;
     }
-
-    public int getY() {
+public int getVarY() {
 	return y;
     }
 

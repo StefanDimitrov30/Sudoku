@@ -18,9 +18,10 @@ public class MainWindow extends JFrame {
 
     public static void main(String[] args) {
 	JFrame sudoku = new JFrame("SUDOKU");
-	JPanel buttonPane = new ButtoPanel();
 	sudoku.setLayout(new BorderLayout());
 	sudoku.setDefaultCloseOperation(EXIT_ON_CLOSE);
+	
+	JPanel buttonPane = new ButtoPanel();
 	JPanel gamePanel = new JPanel(new GridLayout(3, 3));
 	
 	JPanel panel = null;
@@ -28,10 +29,11 @@ public class MainWindow extends JFrame {
 	    panel = new SmallGrid();
 	    gamePanel.add(panel);
 	}
-	gamePanel.add(buttonPane);
+	
+	sudoku.add(buttonPane,BorderLayout.SOUTH);
 	sudoku.add(gamePanel);
 
-	sudoku.setSize(650, 650);
+	sudoku.setSize(750, 750);
 	sudoku.setVisible(true);
 
     }
