@@ -7,17 +7,17 @@ import java.awt.GridLayout;
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
-public class SmallGrid extends JPanel {
+public class SmallGameBoard extends JPanel {
     private JPanel[][] miniPanel;
     private Fields[][] fields;
 
-    public SmallGrid() {
+    public SmallGameBoard() {
 	super(new GridLayout(3, 3));
 	this.miniPanel = new JPanel[3][3];
 	for (int y = 0; y < miniPanel.length; y++) {
 	    for (int x = 0; x < miniPanel.length; x++) {
 		miniPanel[y][x] = new JPanel(new GridLayout(3, 3));
-		miniPanel[y][x].setBorder(BorderFactory.createLineBorder(Color.BLUE));
+		miniPanel[y][x].setBorder(BorderFactory.createLineBorder(Color.GRAY));		
 		miniPanel[y][x].setPreferredSize(new Dimension(25, 25));
 		add(miniPanel[y][x]);
 	    }

@@ -9,31 +9,31 @@ import javax.swing.GroupLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.UIManager;
 
 public class MainWindow extends JFrame {
-    /**
-	 * 
-	 */
-    private static final long serialVersionUID = 2521905002476170344L;
+    public MainWindow() {
+	super("SUDOKU");
+	setLayout(new BorderLayout());
+	setDefaultCloseOperation(EXIT_ON_CLOSE);
+	setSize(750, 750);
+	
+	JPanel smallGameBoard = new SmallGameBoard();
+	add(smallGameBoard, BorderLayout.CENTER);
+	pack();
+	setLocationRelativeTo(null);
+	setVisible(true);
+    }
 
     public static void main(String[] args) {
-
-	JFrame sudoku = new JFrame("SUDOKU");
-	sudoku.setLayout(new BorderLayout());
-	sudoku.setDefaultCloseOperation(EXIT_ON_CLOSE);
-	JPanel buttonPane = new ButtoPanel();
-	JPanel gamePanel = new JPanel(new GridLayout(3, 3));
-
-	JPanel panel = null;
-	for (int i = 0; i < 9; i++) {
-	    panel = new SmallGrid();
-	    gamePanel.add(panel);
+	try{
+	    
+	    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+	}catch (Exception ex){
+	    
+	    ex.printStackTrace();
 	}
-
-	sudoku.add(buttonPane, BorderLayout.SOUTH);
-	sudoku.add(gamePanel);
-	sudoku.setSize(750, 750);
-	sudoku.setVisible(true);
+	new MainWindow();
 
     }
 
