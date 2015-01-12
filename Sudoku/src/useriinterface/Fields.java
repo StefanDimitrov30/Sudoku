@@ -12,7 +12,11 @@ public class Fields extends JLabel {
     private int y;
     private int number;
     Fields fields;
-
+/**
+ * 
+ * @param x
+ * @param y
+ */
     public Fields(int x, int y) {
 	super("", CENTER);
 	setPreferredSize(new Dimension(25, 25));
